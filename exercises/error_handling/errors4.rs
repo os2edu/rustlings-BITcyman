@@ -19,7 +19,7 @@ impl PositiveNonzeroInteger {
             Ok(PositiveNonzeroInteger(value as u64))
         }else if value == 0 {
             Err(CreationError::Zero)
-        }else if value < 0{
+        }else{
             Err(CreationError::Negative)
         }
     }
